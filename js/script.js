@@ -7,14 +7,18 @@
 "use strict"
 
 /**
- * This function determines the type of triangle.
+ * This function multiplies two numbers using addition.
  */
 function multiplyThroughAddition() {
   const positiveInteger = parseInt(document.getElementById("positive-integer").value);
-  const counter = parseInt(document.getElementById("counter").value);
-  const product = 0;
+  let counter = parseInt(document.getElementById("counter").value); // Changed to let
+  let product = 0; // Changed to let
 
   while (counter > 0) {
-    product = product + positiveInteger
+    product = product + positiveInteger; // Accumulate the product
+    counter--; // Decrement counter to avoid infinite loop
   }
+
+  // Display the result in the "result" div
+  document.getElementById("result").innerText = `The product is: ${product}`;
 }
